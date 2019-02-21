@@ -1,17 +1,20 @@
 <template>
-    <div class="code" @click="refreshCode">
+  <div class="container" @click="refreshCode">
     <s-identify :identifyCode="identifyCode"></s-identify>
+    <Loading :show-loading="showLoaddingGif"></Loading>
   </div>
 </template>
 
 <script>
 import SIdentify from "@/components/identify/index";
+import Loading from "@/components/loading/index";
 export default {
   name: "codetest",
   data() {
     return {
       identifyCodes: "1234567890",
-      identifyCode: ""
+      identifyCode: "",
+      showLoaddingGif: true
     };
   },
   mounted() {
@@ -34,16 +37,14 @@ export default {
     }
   },
   components: {
-    SIdentify
+    SIdentify,
+    Loading
   }
 };
 </script>
 
 <style lang="stylus" scope>
-.code {
-  margin: 400px auto;
-  width: 114px;
-  height: 40px;
-  border: 1px solid red;
+.container {
+  height: 100%
 }
 </style>

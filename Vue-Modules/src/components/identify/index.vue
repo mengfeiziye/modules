@@ -1,3 +1,8 @@
+<!--
+ *
+ * 参数详情参考 https://blog.csdn.net/yyjourney/article/details/79072093
+ *
+ -->
 <template>
 <div class="s-canvas">
   <canvas id="s-canvas" :width="contentWidth" :height="contentHeight"></canvas>
@@ -7,7 +12,7 @@
 <script type="text/ecmascript-6">
 export default {
   name: "SIdentify",
-  props: { // 参数参考 https://blog.csdn.net/yyjourney/article/details/79072093
+  props: {
     identifyCode: {
       type: String,
       default: "1234"
